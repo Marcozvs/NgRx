@@ -1,0 +1,16 @@
+<p-panel header="Income Manegement">
+  <p-table [value]="incomes">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Source</th>
+        <th>Amount</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-income>
+      <tr>
+        <td>{{ income.source }}</td>
+        <td>{{ income.amount | currency }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-panel>

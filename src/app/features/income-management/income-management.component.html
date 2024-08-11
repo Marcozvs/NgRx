@@ -1,0 +1,11 @@
+<div class="p-4 flex flex-col gap-4">
+  <app-income-management-form (addIncomeEvent)="getIncomes()" />
+  <div class="flex gap-4 w-full">
+    <div class="w-full">
+      <app-income-management-table [incomes]="incomes" />
+    </div>
+    <div class="w-full">
+      <app-income-management-chart #chart [incomes]="incomes" />
+    </div>
+  </div>
+</div>

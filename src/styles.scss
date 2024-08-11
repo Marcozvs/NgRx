@@ -1,0 +1,14 @@
+// styles.scss
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer primeng;
+@import "primeicons/primeicons.css";
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}

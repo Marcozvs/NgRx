@@ -1,0 +1,30 @@
+<p-button (onClick)="op.toggle($event)" icon="pi pi-plus" label="Add" />
+<p-overlayPanel #op>
+  <form [formGroup]="formGroup" class="flex gap-4 items-end">
+    <div class="flex flex-col gap-2">
+      <label class="font-semibold text-lg text-blue-500" for="currency-us">
+        Source
+      </label>
+      <input
+        formControlName="source"
+        type="text"
+        pInputText
+        placeholder="Work"
+      />
+    </div>
+    <div class="flex flex-col gap-2">
+      <label class="font-semibold text-lg text-blue-500" for="currency-us">
+        Amount
+      </label>
+      <p-inputNumber
+        formControlName="amount"
+        inputId="currency-us"
+        mode="currency"
+        currency="USD"
+        locale="en-US"
+        placeholder="$4,000.00"
+      />
+    </div>
+    <p-button [disabled]="formGroup.status !== 'VALID'" (onClick)="addIncome(); op.toggle($event)" label="Confirm" />
+  </form>
+</p-overlayPanel>
